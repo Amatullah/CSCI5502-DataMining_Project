@@ -1,21 +1,21 @@
 import pyexcel as p
 import openpyxl as xl
 
-p.save_book_as(file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_male.xls',
-               dest_file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_male.xlsx')
+p.save_book_as(file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_female.xls',
+               dest_file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_female.xlsx')
 
-p.save_book_as(file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/Employment_agriculture_male.xls',
-               dest_file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/Employment_agriculture_male.xlsx')
+p.save_book_as(file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/Employment_services_female.xls',
+               dest_file_name='/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/Employment_services_female.xlsx')
 
-in_file ="/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_male.xlsx"
+in_file ="/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_female.xlsx"
 oldwb = xl.load_workbook(in_file)
 oldws = oldwb.worksheets[0]
 
-in_file1 ="/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/Employment_agriculture_male.xlsx"
+in_file1 ="/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/Employment_services_female.xlsx"
 oldwb1 = xl.load_workbook(in_file1)
 oldws1 = oldwb1.worksheets[0]
 
-out_file = "/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_agriculture_male.xlsx"
+out_file = "/home/xuefei/Desktop/CSCI5502-DataMining_Project/Dataset/employment/literacy_services_female.xlsx"
 newwb = xl.load_workbook(out_file)
 newws = newwb.active 
 
@@ -42,3 +42,5 @@ for process_line in range(2,266):
 						print("success")
 		
 newwb.save(str(out_file))
+
+#employment_agriculture is done
